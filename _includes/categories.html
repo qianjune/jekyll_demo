@@ -1,0 +1,9 @@
+<div class="">
+  <ul>
+    {% for category in site.categories %}
+      <li>
+        <a href="#">{{ category | first }}</a>
+        </span>{{ category | last | size }}</span>
+      </li>
+    {% endfor %}
+</div>
