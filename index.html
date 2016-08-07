@@ -13,3 +13,6 @@ title: 我的Blog
     </li>
   {% endfor %}
 </ul>
+{% for post in paginator.posts %}
+<a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+{% endfor %}
