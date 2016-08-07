@@ -1,0 +1,38 @@
+body{
+  background-color: #CCCCCC;
+}
+a{
+  text-decoration: none;
+}
+a:hover{
+  text-decoration: none;
+}
+
+.card-container{
+}
+
+.card{
+  border: 1px solid gray;
+  border-radius: 3px;
+  margin-bottom: 15px;
+  padding: 10px 20px;
+  transition: all 0.2s;
+  overflow: hidden;
+  cursor: pointer;
+  color: black;
+  background: white;
+}
+
+.card:hover{
+  box-shadow: 15px 15px 5px #888888;
+  transform: translate3d(6px, -9px, 0);
+  background-color: #6699FF;
+  color: white;
+  border: 1px solid #6699FF;
+}
+
+.card-header{
+  font-size: 20px;
+}
+
+.card-body{}

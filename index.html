@@ -4,16 +4,28 @@ title: 我的Blog
 ---
 
 
-<h2>{{ page.title }}</h2>
+<h2 class="animated rubberBand">{{ page.title }}</h2>
 <p>最新文章</p>
-<ul>
+<div class="content-container">
   {% for post in paginator.posts %}
-    <li>{{ post.date | date_to_string }}
-      <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
-      {{ post.excerpt | remove: '<p>' | remove: '</p>' }}
-    </li>
+  <a href="{{ site.baseurl }}{{ post.url }}">
+    <div class="card">
+      <div class="card-header">
+        {{ post.title }}
+      </div>
+      <div class="">
+        <span class="glyphicon glyphicon-time" aria-hidden="true"></span>
+        {{ post.date | date:"%Y-%m-%d"  }}
+      </div>
+      <div class="card-body">
+        {{ post.excerpt}}
+      </div>
+    </div>
+    </a>
   {% endfor %}
-</ul>
+
+</div>
+
 {% if paginator.previous_page %}
     <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">上一页</a>
 {% endif %}
